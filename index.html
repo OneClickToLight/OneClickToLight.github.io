@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="UTF-8">
-   <title>Redirecting...</title>
-   <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.icon.pln123" />
+  <meta charset="UTF-8">
+  <title>Redirect PLN Mobile</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var ua = navigator.userAgent.toLowerCase();
+
+      // Redirect untuk Android → Google Play (link aktif)
+      if (ua.includes("android")) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.icon.pln123";
+      }
+      // Redirect untuk iOS → App Store (link aktif)
+      else if (ua.includes("iphone") || ua.includes("ipad") || ua.includes("ipod")) {
+        window.location.href = "https://apps.apple.com/id/app/pln-mobile/id1299581030";
+      }
+      // Redirect selain mobile (opsional)
+      else {
+        window.location.href = "https://layanan.pln.co.id/pln-mobile";
+      }
+    });
+  </script>
 </head>
 <body>
-   <p>Sedang mengalihkan ke PLN Mobile...</p>
+  <p>Sedang Menyiapkan Kanebo…</p>
 </body>
 </html>
